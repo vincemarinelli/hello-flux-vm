@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-shell-pod
+  namespace: hello-flux-vm
+spec:
+  containers:
+  - image: hello-flux:v1.0
+    command: ["sh"]
+    args: 
+      - "-c"
+      - "sleep 30m"
