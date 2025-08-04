@@ -3,16 +3,16 @@ kind: Namespace
 metadata:
   name: hello-flux-vm
 ---
-# apiVersion: v1
-# kind: Pod
-# metadata:
-#   name: alpine-shell-pod
-#   namespace: hello-flux-vm
-# spec:
-#   containers:
-#   - name: alpine-shell-container
-#     image: hello-flux:v1.0
-#     command: ["sh"]
-#     args: 
-#       - "-c"
-#       - "sleep 30m"
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-shell-pod
+  namespace: hello-flux-vm
+spec:
+  containers:
+  - name: alpine-shell-container
+    image: hello-flux:v1.0
+    command: ["sh"]
+    args: 
+      - "-c"
+      - "sleep 30m"
